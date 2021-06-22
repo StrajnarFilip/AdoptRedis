@@ -15,8 +15,12 @@ con = sqlite3.connect(db_file_name) # Connects to database, which simply means o
 cur = con.cursor() # Createst a Cursor object,
 # which is able to execute SQL statements: https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor
 
-cur.execute('''CREATE TABLE json_strings
-               (id int primary key)''')
+cur.execute('''CREATE TABLE json_strings (
+              id integer primary key AUTOINCREMENT,
+              time_stamp datetime,
+              json_string text
+              );''')
+# Creates a basic table consisting of automatically sequential ID, timestamp and json string column (or attribute)
 ```
 
 # Easy GUI exploration

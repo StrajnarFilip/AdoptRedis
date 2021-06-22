@@ -1,2 +1,27 @@
-# AdoptRedis
-Repository for easy Redis adoption. Ditch your "JSON file" and PickleDB :)
+# AdoptSQLite
+Repository for easy SQLite adoption. Ditch your "JSON file" and PickleDB :)
+
+# Python Quickstart
+
+Excellent resource: https://docs.python.org/3/library/sqlite3.html
+
+```py
+import sqlite3
+
+db_file_name="examble.db"
+
+con = sqlite3.connect(db_file_name) # Connects to database, which simply means opening the single file
+
+cur = con.cursor() # Createst a Cursor object,
+# which is able to execute SQL statements: https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor
+
+cur.execute('''CREATE TABLE json_strings
+               (id int primary key)''')
+```
+
+# Easy GUI exploration
+ DBeaver https://dbeaver.io/download/
+ 
+ or
+ 
+ DB Browser https://sqlitebrowser.org/dl/
